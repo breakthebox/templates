@@ -40,8 +40,6 @@
 
 % --- Indentation & paragraph styles
 % ---
-\newcommand{\sectionbreak}{\clearpage}
-
 \setlength{\parindent}{0em}
 \setlength{\parskip}{0.8em}
 
@@ -79,46 +77,7 @@
 \pagestyle{followingpage}
 \AtBeginDocument{\thispagestyle{firstpage}}
 
-% --- Title page
-% ---
-\usepackage{setspace}
 
-\renewcommand{\maketitle}{\begingroup % Create the command for including the title page in the document
-\pagestyle{firstpage}
-\includegraphics[width=2.5cm]{logo_portrait}
-
-\vspace*{\fill}
-
-\vspace{5cm}
-\begin{spacing}{2}
-{\Huge \bfseries \show@project \par} % --- Project Name
-\end{spacing}
-\vspace{24pt}
-\begin{spacing}{2}
-{\Huge\bfseries \show@customer \par} % --- Customer Name
-\end{spacing}
-\begin{spacing}{1.5}
-{\huge \show@doctitle \par} % --- Document Title
-\end{spacing}
-
-\vfill
-\begin{tabular}{l l}
-\hline
-\\
-\textbf{Datum} & \show@versiondate \\
-\textbf{Version} & \show@version \\
-\textbf{Autor/en} & \@author \\
-\textbf{Status} & \show@status \\
-\\
-\hline
-\tiny{\copyright Break the Box GmbH, \the\year}
-\end{tabular}
-
-
-
-\vfill
-\clearpage
-\endgroup}
 
 % --- Definitions
 % ---
